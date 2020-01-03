@@ -70,30 +70,6 @@ def changFileName(olddirpath,newdirpath,newfilename):
     shutil.copy(os.path.join(olddirpath, newfilename), newdirpath)
     os.remove(os.path.join(olddirpath, newfilename))
 
-#根据文件得到字幕list(这个对换行字幕有bug,造成角标错误)
-def getalltext1(filename):
-    a = 1
-    b = 2
-    c = 3
-    state = a
-    text = ''
-    relustarray = []
-    with open(filename, 'r',encoding='utf-8') as f:  # 打开srt字幕文件，并去掉文件开头的\ufeff
-        for line in f.readlines():  # 遍历srt字幕文件
-            if state == a:  # 跳过第一行
-                state = b
-            elif state == b:  # 跳过第二行
-                state = c
-            elif state == c:  # 读取第三行字幕文本
-                if len(line.strip()) != 0:
-                    text += '' + line.strip()  # 将同一时间段的字幕文本拼接
-                    state = c
-                    relustarray.append(text)
-                    # return
-                elif len(line.strip()) == 0:
-                    state = a
-                    text = ''
-    return relustarray
     
 #根据文件得到字幕list
 def getalltext(filename):
