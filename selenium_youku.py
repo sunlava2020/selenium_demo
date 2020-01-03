@@ -30,8 +30,8 @@ def login(driver):
     alert = driver.switch_to_active_element()
     time.sleep(2)
     # 向输入框写内容
-    driver.find_element_by_id("YT-ytaccount").send_keys("18937117285")
-    driver.find_element_by_id("YT-ytpassword").send_keys("cc123456")
+    driver.find_element_by_id("YT-ytaccount").send_keys("你的用户名")
+    driver.find_element_by_id("YT-ytpassword").send_keys("你的密码")
     # 点击搜索按钮
     time.sleep(2)
     driver.find_element_by_id("YT-nloginSubmit").click()
