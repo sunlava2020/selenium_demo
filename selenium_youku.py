@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 # encoding: utf-8
 """
-@author: sunlava
-@website: u-union.com
+@author: Muzhuangzhu
+@website: www.youtubetop100.com
 @license: (C) Copyright 2013-2019, Muzhuangzhu
-@contact: sunlava2046@gmail.com
+@contact: sunlava@gmail.com
 @software: PyCharm
 @file: selenium_youku.py
 @time: 2019/12/24 22:56
@@ -19,7 +19,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 
-FILEPATH = 'h:\\youku_videos\\'
+FILEPATH = 'h:\\youku_videos\\' #视频存储的路径,记得修改为你个人的
 
 
 def login(driver):
