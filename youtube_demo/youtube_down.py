@@ -11,16 +11,16 @@ class VideoDownloader():
             yt = pytube.YouTube(self.urls[id])
             print("id: "+str(id)+" url=="+self.urls[id])
             print(yt.captions.all())
-            #有字幕的视频要,没有字幕的视频不要
+            #Video with subtitles, no video without subtitles
             if len(yt.captions.all()) > 0:
-                #视频下载
+                #Video download
                 fileNameAll0 = FILEPATH + str(id)
                 video = yt.streams.filter(file_extension='mp4', res='1080p').first()
                 video1 = yt.streams.filter(file_extension='mp4', res='720p').first()
                 video = video if video!=None else video1
-                print("即将下载的视频是:",video)
+                print("The upcoming video is:",video)
                 video.download(FILEPATH, str(id)+"", '')
-                print("下载完毕!.......")
+                print("The download!.......")
 
 if __name__ == '__main__':
     downloader = VideoDownloader()
