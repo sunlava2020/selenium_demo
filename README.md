@@ -1,5 +1,8 @@
 # python_work
 
+Selenium 是一个WEB测试工具。Selenium测试直接运行在浏览器，可以模拟真实用户的行为。
+支持的浏览器包括IE(7、8、9)、Mozilla Firefox、Mozilla Suite、Chrome等。
+这个工具的主要功能包括：测试与浏览器的兼容性——测试你的应用程序看是否能够很好地工作在不同浏览器和操作系统之上。测试系统功能——创建回归测试检验软件功能和用户需求。
 
 selenium 安装:当然是pip了
 pip install selenium
